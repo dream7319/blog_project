@@ -1,0 +1,8 @@
+<div class="links">
+    <h3>友情链接</h3>
+    <ul>
+        {% for links in links_list %}
+            <li><a href="{{ links.callback_url }}">{{ links.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

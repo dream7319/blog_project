@@ -592,3 +592,52 @@ Traceback (most recent call last):
   File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 533, in invalid_block_tag
     get_text_list(["'%s'" % p for p in parse_until], 'or'),
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'src', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+2018-04-15 20:16:54,094 [Thread-50:2172] [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /index/
+Traceback (most recent call last):
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:/pythonworkspace/blog_project\blog\views.py", line 42, in index
+    return render(request, 'index.html', locals())
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loader_tags.py", line 182, in render
+    template = context.template.engine.get_template(template_name)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loaders\base.py", line 24, in get_template
+    contents = self.get_contents(origin)
+  File "F:\pythonworkspace\djangodemo\venv\lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    with open(origin.name, encoding=self.engine.file_charset) as fp:
+PermissionError: [Errno 13] Permission denied: 'F:\\pythonworkspace\\blog_project\\templates'
