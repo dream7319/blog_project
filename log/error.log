@@ -1,0 +1,7 @@
+2018-04-15 17:59:20,376 [Thread-2:14860] [blog.views:28] [views:index] [ERROR]- <Page 3 of 3> is not JSON serializable
+2018-04-15 17:59:35,334 [Thread-6:10328] [blog.views:28] [views:index] [ERROR]- <Page 2 of 3> is not JSON serializable
+2018-04-15 17:59:50,746 [Thread-7:8408] [blog.views:28] [views:index] [ERROR]- <Page 2 of 3> is not JSON serializable
+2018-04-15 18:00:45,739 [Thread-7:1108] [blog.views:28] [views:index] [ERROR]- <Page 2 of 3> is not JSON serializable
+2018-04-15 18:03:48,069 [Thread-7:3208] [blog.views:29] [views:index] [ERROR]- <Article: 手机的16个惊人小秘密，据说99.999%的人都不知> is not JSON serializable
+2018-04-15 18:05:41,940 [Thread-8:15680] [blog.views:29] [views:index] [ERROR]- <Article: 手机的16个惊人小秘密，据说99.999%的人都不知> is not JSON serializable
+2018-04-15 18:06:53,776 [Thread-7:14068] [blog.views:29] [views:index] [ERROR]- datetime.datetime(2018, 4, 15, 9, 47, 27, 577328, tzinfo=<UTC>) is not JSON serializable
