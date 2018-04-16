@@ -1,0 +1,26 @@
+1、什么是django admin？django.contrib.admin
+Django的管理员模块是Django的标准库django.contrib的一部分，
+contrib下还包括django.contrib.auth，django.contrib.sessions和
+django.contrib.comments模块等,django.contrib.admin
+2、如何配置使用django admin?
+2.1、在INSTALLED_APPS中添加django.contrib.admin
+2.2、配置urls.py
+url(r'^admin/', include(admin.site.urls))
+2.3、在admin注册的Model，（默认方式和自定义方式）,注意model中关于admin的一些配置
+
+fields\exclude 
+fieldsets 
+list_display
+list_display_links
+list_editable 
+list_filter 
+inlines 
+...
+
+参考资料：
+https://docs.djangoproject.com/en/1.8/ref/contrib/admin/
+
+xadmin
+
+扩展阅读：admindocs的使用
+https://docs.djangoproject.com/en/1.8/ref/contrib/admin/admindocs/

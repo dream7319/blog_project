@@ -1,0 +1,17 @@
+功能点：
+1、文章归档
+
+技术点：
+1、使用filter()进行查询
+2、values()，distinct()的使用
+3、django中直接使用sql的两种方式
+SELECT DISTINCT DATE_FORMAT(date_publish, '%Y-%m') as col_date FROM blog_article ORDER BY date_publish
+3.1、raw （异常：Raw query must include the primary key，返回结果必须包含主键）
+3.2、excute
+4、尝试用优雅的方式解决一些数据处理上的问题
+自定义Manager管理器
+
+直接执行sql资料参考：
+https://docs.djangoproject.com/en/1.8/topics/db/sql/
+管理器资料参考：
+https://docs.djangoproject.com/en/1.8/topics/db/managers/

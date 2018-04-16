@@ -1,0 +1,10 @@
+注册，登录和注销
+
+知识点：
+1、django.contrib.auth
+（logout, login, authenticate）
+2、django.contrib.auth.hashers
+（make_password）django的加密方式
+3、使用redirect进行跳转
+4、模板中如何判断用户是否已经登陆
+5、...

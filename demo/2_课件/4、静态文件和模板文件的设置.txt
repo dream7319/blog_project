@@ -1,0 +1,7 @@
+步骤：
+1、安装virtualenv,创建虚拟环境
+pip install virtualenv
+2、到pycharm创建项目，并设置对应的虚拟环境路径，并安装相关库
+virtualenv --system-site-packages blog_project_env 在当前目录下创建环境
+3、静态文件和模板的设置
+4、运行项目能访问到我们的网页

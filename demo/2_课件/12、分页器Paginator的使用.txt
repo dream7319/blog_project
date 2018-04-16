@@ -1,0 +1,75 @@
+功能点：
+1、广告数据获取
+2、最新文章数据获取（分页）
+
+技术点：
+1、查询的基本操作,all()
+补充知识点：
+a、QuerySet[:1]，这种方式是查询所有的结果再取其中一条数据，还是只从数据库中取了一条
+b、怎么理解QuerySet的查询是惰性的(当我们去执行all，filter，get，是不会去执行sql的，
+当我们去调用查询结果集的时候会执行sql)
+2、分页器Paginator的使用
+3、locals()函数的使用
+4、过滤器的使用
+
+
+
+
+备用代码：
+
+<div id="pagination">
+
+
+    <ul id="pagination-flickr">
+
+
+
+    {% if article_list.has_previous %}
+
+
+
+    <li class="previous"><a href="?page={{ article_list.previous_page_number }}">&laquo;上一页</a></li>
+
+
+
+    {% else %}
+
+
+
+    <li class="previous-off">&laquo;上一页</li>
+
+
+
+    {% endif %}
+
+     <li class="active">{{ article_list.number }}/{{ article_list.paginator.num_pages }}</li>
+
+
+
+    {% if article_list.has_next %}
+
+
+
+      <li class="next"><a href="?page={{ article_list.next_page_number }}">下一页 &raquo;</a></li>
+
+
+
+    {% else %}
+
+
+
+      <li class="next-off">下一页 &raquo;</li>
+
+
+
+    {% endif %}
+
+
+
+   </ul>
+
+
+</div>
+
+
+

@@ -1,0 +1,12 @@
+备注：
+1、覆盖了静态文件目录，增加了几个模板：article.html、login.html、reg.html
+2、修改了Comment model和User Model，注意同步到数据库
+3、增加了相应的功能代码
+
+知识点：
+1、DoesNotExist异常
+2、safe过滤器的使用，date过滤器的使用
+3、如何自定义一个过滤器？
+
+参考资料：
+https://docs.djangoproject.com/en/1.8/howto/custom-template-tags/

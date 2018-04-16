@@ -1,0 +1,11 @@
+知识点：
+1、评论信息的读取。注意一些细节（减少数据库读写次数）
+2、发表评论
+3、客户端验证和服务端验证
+4、csrf验证，防止跨站请求伪造（Cross-site request forgery）
+5、表单的使用
+
+参考资料：
+https://docs.djangoproject.com/en/1.8/topics/forms/
+https://docs.djangoproject.com/en/1.8/ref/forms/validation/
+https://docs.djangoproject.com/en/1.8/ref/forms/fields/
