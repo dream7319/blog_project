@@ -5,3 +5,11 @@
 2018-04-15 18:03:48,069 [Thread-7:3208] [blog.views:29] [views:index] [ERROR]- <Article: 手机的16个惊人小秘密，据说99.999%的人都不知> is not JSON serializable
 2018-04-15 18:05:41,940 [Thread-8:15680] [blog.views:29] [views:index] [ERROR]- <Article: 手机的16个惊人小秘密，据说99.999%的人都不知> is not JSON serializable
 2018-04-15 18:06:53,776 [Thread-7:14068] [blog.views:29] [views:index] [ERROR]- datetime.datetime(2018, 4, 15, 9, 47, 27, 577328, tzinfo=<UTC>) is not JSON serializable
+2018-04-17 11:29:51,521 [Thread-7:13052] [blog.views:58] [views:index] [ERROR]- 'ArticleManager' object is not subscriptable
+2018-04-17 11:34:46,627 [Thread-7:13200] [blog.views:58] [views:index] [ERROR]- 'ArticleManager' object is not subscriptable
+2018-04-17 11:36:15,298 [Thread-7:13176] [blog.views:58] [views:index] [ERROR]- Can't convert 'QuerySet' object to str implicitly
+2018-04-17 11:40:37,775 [Thread-7:5268] [blog.views:58] [views:index] [ERROR]- 'locale' codec can't encode character '\u6587' in position 5: Illegal byte sequence
+2018-04-17 11:41:20,532 [Thread-7:13224] [blog.views:58] [views:index] [ERROR]- 'locale' codec can't encode character '\u6587' in position 5: Illegal byte sequence
+2018-04-17 11:41:49,092 [Thread-7:12856] [blog.views:58] [views:index] [ERROR]- 'locale' codec can't encode character '\u6587' in position 5: Illegal byte sequence
+2018-04-17 13:30:03,882 [Thread-13:14012] [blog.views:58] [views:index] [ERROR]- 'locale' codec can't encode character '\u6587' in position 5: Illegal byte sequence
+2018-04-17 13:40:28,437 [Thread-7:13656] [blog.views:65] [views:index] [ERROR]- unsupported operand type(s) for +: 'int' and 'str'

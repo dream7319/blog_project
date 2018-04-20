@@ -14,4 +14,5 @@ from blog import views
 
 urlpatterns = [
     url('^index/$', view=views.index, name="index"),
+    url(r'^article/detail/$', view=views.article_detail, name="article_detail")
 ]

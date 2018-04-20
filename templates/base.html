@@ -36,13 +36,85 @@
         {% block left_content %} {% endblock %}
     </div>
     <div class="r_box f_r">
-        {% block right_content %} {% endblock %}
+        <div class="tit01">
+            <h3>关注我</h3>
+            <div class="gzwm">
+                <ul>
+                    <li><a class="xlwb" href="#" target="_blank">新浪微博</a></li>
+                    <li><a class="txwb" href="#" target="_blank">腾讯微博</a></li>
+                    <li><a class="rss" href="portal.php?mod=rss" target="_blank">RSS</a></li>
+                    <li><a class="wx" href="mailto:admin@admin.com">邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--tit01 end-->
+        <div class="moreSelect" id="lp_right_select">
+            <script>
+                window.onload = function () {
+                    var oLi = document.getElementById("tab").getElementsByTagName("li");
+                    var oUl = document.getElementById("ms-main").getElementsByTagName("div");
+
+                    for (var i = 0; i < oLi.length; i++) {
+                        oLi[i].index = i;
+                        oLi[i].onmouseover = function () {
+                            for (var n = 0; n < oLi.length; n++) oLi[n].className = "";
+                            this.className = "cur";
+                            for (var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+                            oUl[this.index].style.display = "block"
+                        }
+                    }
+                }
+            </script>
+            <div class="ms-top">
+                <ul class="hd" id="tab">
+                    <li class="cur"><a href="/">浏览排行</a></li>
+                    <li><a href="/">评论排行</a></li>
+                    <li><a href="/">站长推荐</a></li>
+                </ul>
+            </div>
+            <div class="ms-main" id="ms-main">
+                <div style="display: block;" class="bd bd-news">
+                    <ul>
+                        {% for browse in browse_list %}
+                            <li><a href="/" target="_blank">{{ browse.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="bd bd-news">
+                    <ul>
+                        {% for article_comment in article_comment_rank_list %}
+                        <li><a href="/" target="_blank">{{ article_comment.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="bd bd-news">
+                    <ul>
+                        {% for station_master in station_master_list %}
+                            <li><a href="/" target="_blank">{{ station_master.title }}</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+            <!--ms-main end -->
+        </div>
+    <!--切换卡 moreSelect end -->
+
+        {% include 'tag_cloud.html' %}
+        <div class="tuwen">
+            <h3>文章归档</h3>
+            <ul>
+                {% for archive in archive_list %}
+                    <li>
+                        <p><span class="tutime font-size-18"><a href=''>{{ archive.data }}</a></span></p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% include 'links.html' %}
     </div>
     <!--r_box end -->
 </article>
-<footer>
-    <p class="ft-copyright">{{ SITE_NAME }}的个人博客 蜀ICP备xxxxxxx号-1</p>
-    <div id="tbox"><a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a></div>
-</footer>
+{% include 'footer.html' %}
 </body>
 </html>

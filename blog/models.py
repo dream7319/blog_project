@@ -46,6 +46,26 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+#自定义文章管理器
+class ArticleManager(models.Manager):
+    #向管理器中添加额外的方法
+    def distinct_date_public(self):
+        distinct_date_list = []
+        date_list = self.values('date_publish').order_by('date_publish')#获取所有的日期
+        for date in date_list:
+            year = str(date['date_publish'].year)
+            month = str(date['date_publish'].month)
+            date =  year + "年" + month+"月文章归档"
+            #str(date['date_publish'].month).rjust(2,'0')
+            data = {}
+            data['data'] = date
+            data['year'] = year
+            data['month'] = month.rjust(2,'0')
+            if data not in distinct_date_list:
+                distinct_date_list.append(data)
+        return distinct_date_list
+
+
 # 文章模型
 class Article(models.Model):
     title = models.CharField(max_length=50, verbose_name='文章标题')
@@ -58,7 +78,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, blank=True, null=True, verbose_name='分类', on_delete=models.DO_NOTHING)
     tag = models.ManyToManyField(Tag, verbose_name='标签')
 
-    # objects = ArticleManager()
+    objects = ArticleManager()
 
     class Meta:
         verbose_name = '文章'
